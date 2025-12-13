@@ -16,9 +16,9 @@ Later on, expand into **Python + InfoSec** as a separate track.
 ## 📦 Web Development Certifications (FCC)
 ### Completed:
 - [x] Responsive Web Design  
-  - 🖥️ [FCC Projects – Responsive Web Design (CodePen Collection)](https://codepen.io/collection/OyNaGb)
+  - 🖥️ [FCC Projects - Responsive Web Design (CodePen Collection)](https://codepen.io/collection/OyNaGb)
 - [x] JavaScript Algorithms and Data Structures  
-  - 🖥️ [FCC Projects – JS: Algorithms & Data Structures (CodePen Collection)](https://codepen.io/collection/EPypbo)  
+  - 🖥️ [FCC Projects - JS: Algorithms & Data Structures (CodePen Collection)](https://codepen.io/collection/EPypbo)  
 - [x] Front End Libraries
   - 🖥️ [FCC Projects - Front End Development Libraries (CodePen Collection)](https://codepen.io/collection/VvmzEd)
 - [x] Data Visualization

@@ -3,7 +3,7 @@
 Tracking my full progress through the [freeCodeCamp.org](https://www.freecodecamp.org/) curriculum — replacing social media with skill-building and working toward mastery in full-stack web development.
 
 ## 📅 Started: August 2025  
-## 🔄 In Progress: Responsive Web Design  
+## 🔄 In Progress: **Quality Assurance** & **Information Security** - The last two required to gain the **Full-Stack Certification**
 
 ---
 
@@ -23,12 +23,14 @@ Later on, expand into **Python + InfoSec** as a separate track.
   - 🖥️ [FCC Projects - Front End Development Libraries (CodePen Collection)](https://codepen.io/collection/VvmzEd)
 - [x] Data Visualization
   - 🖥️ [FCC Projects - Data Visualization (CodePen Collection)](https://codepen.io/collection/qBqJrq)
+- [x] Back End Development and APIs 
+  - 🖥️ Project work was completed locally on my machine.
 
 ### Current:
-- [ ] Back End Development and APIs  
-- [ ] Information Security & Quality Assurance 
+- [ ] Quality Assurance
+- [ ] Information Security 
 
-*Tricky - Lots of Debugging along the way (No where near as straight forward for fCC to connect to my code)*
+*Tricky - Lots of Debugging along the way
 
 ### Yet To Start:
 - [ ] Relational Databases  **BONUS**

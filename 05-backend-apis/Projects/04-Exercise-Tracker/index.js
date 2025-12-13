@@ -5,6 +5,12 @@ require('dotenv').config()
 
 app.use(cors())
 app.use(express.static('public'))
+
+// My Code Below:
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+// My Code Above:
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 });

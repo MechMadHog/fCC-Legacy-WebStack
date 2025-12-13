@@ -1,6 +1,6 @@
 # 🌐 My freeCodeCamp Full Stack Development Path
 
-Tracking my full progress through the [freeCodeCamp.org](https://www.freecodecamp.org/) curriculum — replacing social media with skill-building and working toward mastery in full-stack web development.
+Tracking my full progress through the [freeCodeCamp.org](https://www.freecodecamp.org/) curriculum - replacing social media with skill-building and working toward mastery in full-stack web development.
 
 ## 📅 Started: August 2025  
 ## 🔄 In Progress: **Quality Assurance** & **Information Security** - The last two required to gain the **Full-Stack Certification**

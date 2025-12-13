@@ -49,4 +49,4 @@ Later on, expand into **Python + InfoSec** as a separate track.
 
 ## 🛠 Ways to strengthen my JavaScript Skills:
 
-- **The Odin Project** — Full web dev path; treated as its own track, complementing FCC.  
+- **The Odin Project** - Full web dev path; treated as its own track, complementing FCC.  

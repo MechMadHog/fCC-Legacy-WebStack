@@ -14,6 +14,7 @@ module.exports = function (app) {
     const numInvalid = initNum === "invalid number";
     const unitInvalid = initUnit === "invalid unit";
 
+    // ✅ FCC expects JSON error objects
     if (numInvalid && unitInvalid)
       return res.json({ error: "invalid number and unit" });
 
@@ -24,9 +25,10 @@ module.exports = function (app) {
       return res.json({ error: "invalid unit" });
 
     const returnUnit = convertHandler.getReturnUnit(initUnit);
-
-    const rawReturnNum = convertHandler.convert(initNum, initUnit);
-    const returnNum = Math.round(rawReturnNum * 100000) / 100000;
+    const returnNum =
+      Math.round(
+        convertHandler.convert(initNum, initUnit) * 100000
+      ) / 100000;
 
     const string = convertHandler.getString(
       initNum,
@@ -35,7 +37,7 @@ module.exports = function (app) {
       returnUnit
     );
 
-    return res.json({
+    res.json({
       initNum,
       initUnit,
       returnNum,

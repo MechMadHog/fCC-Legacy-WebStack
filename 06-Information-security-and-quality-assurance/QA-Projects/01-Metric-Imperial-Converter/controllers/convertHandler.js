@@ -12,19 +12,24 @@ function ConvertHandler() {
 
   const normalizeUnit = (u) => {
     if (!u) return null;
-    if (/^l$/i.test(u)) return "L";
-    return u.toLowerCase();
+    if (/^l$/i.test(u.trim())) return "L";
+    return u.trim().toLowerCase();
   };
 
   this.getNum = function (input) {
-    const idx = input.search(/[a-zA-Z]/);
-    const numStr = idx === -1 ? input : input.slice(0, idx);
+    const str = String(input || "");
 
+    const idx = str.search(/[a-zA-Z]/);
+    const numStr = idx === -1 ? str : str.slice(0, idx);
+
+    // default to 1 if no number is provided
     if (!numStr) return 1;
 
+    // reject double fractions
     const slashCount = (numStr.match(/\//g) || []).length;
     if (slashCount > 1) return "invalid number";
 
+    // handle fraction (optionally with decimals)
     if (slashCount === 1) {
       const [a, b] = numStr.split("/");
       const n1 = parseFloat(a);
@@ -33,17 +38,20 @@ function ConvertHandler() {
       return n1 / n2;
     }
 
+    // handle whole/decimal
     const n = parseFloat(numStr);
     if (!isFinite(n)) return "invalid number";
     return n;
   };
 
   this.getUnit = function (input) {
-    const idx = input.search(/[a-zA-Z]/);
+    const str = String(input || "");
+
+    const idx = str.search(/[a-zA-Z]/);
     if (idx === -1) return "invalid unit";
 
-    const raw = input.slice(idx);
-    const unit = normalizeUnit(raw);
+    const rawUnit = str.slice(idx);
+    const unit = normalizeUnit(rawUnit);
 
     if (unit === "L") return "L";
     if (units[unit]) return unit;
@@ -53,17 +61,28 @@ function ConvertHandler() {
 
   this.getReturnUnit = function (initUnit) {
     if (initUnit === "L") return "gal";
-    return units[initUnit.toLowerCase()].returnUnit;
+    const key = String(initUnit || "").toLowerCase();
+    if (!units[key]) return "invalid unit";
+    return units[key].returnUnit;
   };
 
   this.spellOutUnit = function (unit) {
     if (unit === "L") return "liters";
-    return units[unit.toLowerCase()].spell;
+    const key = String(unit || "").toLowerCase();
+    if (!units[key]) return "invalid unit";
+    return units[key].spell;
   };
 
   this.convert = function (initNum, initUnit) {
-    if (initUnit === "L") return initNum * units.l.factor;
-    return initNum * units[initUnit.toLowerCase()].factor;
+    const n = Number(initNum);
+    if (!isFinite(n)) return "invalid number";
+
+    if (initUnit === "L") return n * units.l.factor;
+
+    const key = String(initUnit || "").toLowerCase();
+    if (!units[key]) return "invalid unit";
+
+    return n * units[key].factor;
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {

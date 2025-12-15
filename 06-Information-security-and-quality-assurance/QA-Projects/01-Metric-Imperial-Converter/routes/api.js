@@ -1,12 +1,12 @@
 "use strict";
 
-const ConvertHandler = require("../controllers/convertHandler");
+const ConvertHandler = require("../controllers/convertHandler.js");
 
 module.exports = function (app) {
   const convertHandler = new ConvertHandler();
 
   app.get("/api/convert", function (req, res) {
-    const input = req.query.input;
+    const input = String(req.query.input || "");
 
     const initNum = convertHandler.getNum(input);
     const initUnit = convertHandler.getUnit(input);
@@ -14,23 +14,18 @@ module.exports = function (app) {
     const numInvalid = initNum === "invalid number";
     const unitInvalid = initUnit === "invalid unit";
 
-    if (numInvalid && unitInvalid)
-      return res.json({ error: "invalid number and unit" });
+    if (numInvalid && unitInvalid) return res.json({ error: "invalid number and unit" });
     if (numInvalid) return res.json({ error: "invalid number" });
     if (unitInvalid) return res.json({ error: "invalid unit" });
 
     const returnUnit = convertHandler.getReturnUnit(initUnit);
+
     const rawReturnNum = convertHandler.convert(initNum, initUnit);
     const returnNum = Math.round(rawReturnNum * 100000) / 100000;
 
-    const string = convertHandler.getString(
-      initNum,
-      initUnit,
-      returnNum,
-      returnUnit
-    );
+    const string = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
 
-    res.json({
+    return res.json({
       initNum,
       initUnit,
       returnNum,

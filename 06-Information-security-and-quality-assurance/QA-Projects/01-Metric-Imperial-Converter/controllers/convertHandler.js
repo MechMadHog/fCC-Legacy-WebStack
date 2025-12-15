@@ -12,8 +12,9 @@ function ConvertHandler() {
 
   const normalizeUnit = (u) => {
     if (!u) return null;
-    if (/^l$/i.test(u.trim())) return "L";
-    return u.trim().toLowerCase();
+    const t = String(u).trim();
+    if (/^l$/i.test(t)) return "L";
+    return t.toLowerCase();
   };
 
   this.getNum = function (input) {
@@ -22,23 +23,19 @@ function ConvertHandler() {
     const idx = str.search(/[a-zA-Z]/);
     const numStr = idx === -1 ? str : str.slice(0, idx);
 
-    // default to 1 if no number is provided
     if (!numStr) return 1;
 
-    // reject double fractions
     const slashCount = (numStr.match(/\//g) || []).length;
     if (slashCount > 1) return "invalid number";
 
-    // handle fraction (optionally with decimals)
     if (slashCount === 1) {
-      const [a, b] = numStr.split("/");
-      const n1 = parseFloat(a);
-      const n2 = parseFloat(b);
+      const parts = numStr.split("/");
+      const n1 = parseFloat(parts[0]);
+      const n2 = parseFloat(parts[1]);
       if (!isFinite(n1) || !isFinite(n2)) return "invalid number";
       return n1 / n2;
     }
 
-    // handle whole/decimal
     const n = parseFloat(numStr);
     if (!isFinite(n)) return "invalid number";
     return n;

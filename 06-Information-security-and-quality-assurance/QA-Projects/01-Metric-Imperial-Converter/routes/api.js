@@ -14,17 +14,26 @@ module.exports = function (app) {
     const numInvalid = initNum === "invalid number";
     const unitInvalid = initUnit === "invalid unit";
 
-    // FCC expects these as plain text strings
-    if (numInvalid && unitInvalid) return res.send("invalid number and unit");
-    if (numInvalid) return res.send("invalid number");
-    if (unitInvalid) return res.send("invalid unit");
+    if (numInvalid && unitInvalid)
+      return res.json({ error: "invalid number and unit" });
+
+    if (numInvalid)
+      return res.json({ error: "invalid number" });
+
+    if (unitInvalid)
+      return res.json({ error: "invalid unit" });
 
     const returnUnit = convertHandler.getReturnUnit(initUnit);
 
     const rawReturnNum = convertHandler.convert(initNum, initUnit);
     const returnNum = Math.round(rawReturnNum * 100000) / 100000;
 
-    const string = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
+    const string = convertHandler.getString(
+      initNum,
+      initUnit,
+      returnNum,
+      returnUnit
+    );
 
     return res.json({
       initNum,

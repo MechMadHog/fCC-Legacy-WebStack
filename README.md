@@ -8,8 +8,8 @@ Tracking my full progress through the [freeCodeCamp.org](https://www.freecodecam
 ---
 
 ## 🎯 Goal
-Complete the **first seven Web-focused certifications**, build portfolio-ready projects, and document everything to share the learning journey.  
-Later on, expand into **Python + InfoSec** as a separate track.  
+Complete the **first eight Web-focused certifications**, fill my portfolio website with projects, and document everything to share the learning journey.  
+Later on, expand into the **Python** as a separate track.  
 
 ---
 

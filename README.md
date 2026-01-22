@@ -1,52 +1,85 @@
-# 🌐 My freeCodeCamp Full Stack Development Path
+# My freeCodeCamp Full Stack Path
 
-Tracking my full progress through the [freeCodeCamp.org](https://www.freecodecamp.org/) curriculum - replacing social media with skill-building and working toward mastery in full-stack web development.
+This repository tracks my progress through the freeCodeCamp curriculum.
 
-## 📅 Started: August 2025  
-## 🔄 In Progress: **Quality Assurance** & **Information Security** - The last two required to gain the **Full-Stack Certification**
+I started this to replace time spent scrolling with time spent building.
+The goal is not speed. The goal is consistency.
 
----
-
-## 🎯 Goal
-Complete the **first eight Web-focused certifications**, fill my portfolio website with projects, and document everything to share the learning journey.  
-Later on, expand into the **Python** as a separate track.  
+I work on this every day.
 
 ---
 
-## 📦 Web Development Certifications (FCC)
-### Completed:
+## Status
+
+Started: August 2025  
+In Progress: **Quality Assurance** and **Information Security**  
+These are the final two required for the **Full-Stack Certification**.
+
+---
+
+## Goal
+
+Finish the full web certification path.  
+Build real projects.  
+Keep a public record.
+
+Later, expand into Python and security as a separate track.
+
+---
+
+## Web Development Certifications
+
+### Completed
+
 - [x] Responsive Web Design  
-  - 🖥️ [FCC Projects - Responsive Web Design (CodePen Collection)](https://codepen.io/collection/OyNaGb)
+  - [FCC Projects collection](https://codepen.io/collection/OyNaGb)
+
 - [x] JavaScript Algorithms and Data Structures  
-  - 🖥️ [FCC Projects - JS: Algorithms & Data Structures (CodePen Collection)](https://codepen.io/collection/EPypbo)  
-- [x] Front End Libraries
-  - 🖥️ [FCC Projects - Front End Development Libraries (CodePen Collection)](https://codepen.io/collection/VvmzEd)
-- [x] Data Visualization
-  - 🖥️ [FCC Projects - Data Visualization (CodePen Collection)](https://codepen.io/collection/qBqJrq)
-- [x] Back End Development and APIs 
-  - 🖥️ Project work was completed locally on my machine.
+  - [FCC Projects collection](https://codepen.io/collection/EPypbo)
 
-### Current:
-- [ ] Quality Assurance
-- [ ] Information Security 
+- [x] Front End Libraries  
+  - [FCC Projects collection](https://codepen.io/collection/VvmzEd)
 
-*Tricky - Lots of Debugging along the way
+- [x] Data Visualization  
+  - [FCC Projects collection](https://codepen.io/collection/qBqJrq)
 
-### Yet To Start:
-- [ ] Relational Databases  **BONUS**
-  - _(collection link placeholder)_
+- [x] Back End Development and APIs  
+  - Project work was completed locally.
 
 ---
 
-## 📚 Bonus Material (These are treated as *sub-sections* to their relevant counterparts (JS, Python, or algorithms).  )
+### Current
 
-- **Project Euler** → Math-heavy problems (likely more relevant to the Python/InfoSec track).  
-- **Rosetta Code** → Implementing algorithms & data structures in multiple languages.  
-- **Coding Interview Prep** → Extra practice for problem-solving, pattern recognition, and technical interviews.  
+- [ ] Quality Assurance  
+- [ ] Information Security  
 
+These are slow and debugging-heavy. That is expected.
 
 ---
 
-## 🛠 Ways to strengthen my JavaScript Skills:
+### Still To Do
 
-- **The Odin Project** - Full web dev path; treated as its own track, complementing FCC.  
+- [ ] Relational Databases **(bonus)**  
+  - Collection link to be added later.
+
+---
+
+## Bonus Material
+
+These are treated as extensions of the main tracks.
+
+- **Project Euler**  
+  Math-heavy problems. Useful for Python and algorithms.
+
+- **Rosetta Code**  
+  Implementing the same ideas across different languages.
+
+- **Coding Interview Prep**  
+  Extra pattern recognition and problem solving.
+
+---
+
+## Supporting Tracks
+
+- **The Odin Project**  
+  A separate full web path. Used to reinforce fundamentals.

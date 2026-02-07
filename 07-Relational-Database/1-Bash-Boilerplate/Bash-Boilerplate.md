@@ -117,16 +117,114 @@ Closes the current terminal session.
 
 ---
 
-## 🧠 Conceptual Flow
+## 🧠 Conceptual Flow (Mental Model)
 
-1. 👀 **See** → `pwd`, `ls`
-2. 🧭 **Move** → `cd`
-3. 🛠️ **Create** → `mkdir`, `touch`, `echo`
-4. 🔎 **Inspect** → `ls -l`, `more`
-5. 🗂️ **Organise** → `cp`, `mv`
-6. 🔍 **Search** → `find`
-7. 🧨 **Clean up** → `rm`, `rmdir`
-8. 🚪 **Exit** → `exit`
+Bash commands build on each other. Each layer assumes you understand the previous one.
+
+---
+
+### 1️⃣ Observe the System (Awareness)
+Before acting, you need visibility.
+
+- `pwd` — where am I?
+- `ls` — what exists here?
+- `ls -l` — what *kind* of things are these?
+- `clear` — reduce noise
+
+🧠 *Rule:* never move or delete what you haven’t looked at.
+
+---
+
+### 2️⃣ Navigate the Filesystem (Positioning)
+You can only act where you are.
+
+- `cd` — change your working context
+- `cd ..` — step back up
+- `cd ~` — return to home
+
+🧠 *Rule:* location determines consequence.
+
+---
+
+### 3️⃣ Create Structure (Scaffolding)
+Before content, you create containers.
+
+- `mkdir` — define structure
+- `mkdir -p` — define hierarchy
+- `touch` — reserve filenames
+
+🧠 *Rule:* structure first, content second.
+
+---
+
+### 4️⃣ Add or Inspect Content (Verification)
+Once things exist, you check and read them.
+
+- `echo` — generate content
+- `>` / `>>` — control where content goes
+- `more` — inspect safely
+
+🧠 *Rule:* verify before organising.
+
+---
+
+### 5️⃣ Organise and Re-organise (Control)
+This is where **`mv` lives**.
+
+- `mv` — reposition **or rename**
+- `cp` — duplicate without risk
+- `find` — locate before acting
+
+🧠 *Key insight:*  
+In Unix, **renaming *is* moving**.  
+There is no separate “rename” command because the file never changes — only its **path** does.
+
+🧠 *Rule:* organisation is path management.
+
+---
+
+### 6️⃣ Validate the Outcome (Confirmation)
+After changes, you re-check reality.
+
+- `ls`
+- `pwd`
+- `find`
+
+🧠 *Rule:* assume nothing — confirm everything.
+
+---
+
+### 7️⃣ Remove What No Longer Belongs (Destruction)
+Only after structure and verification.
+
+- `rm` — remove files
+- `rm -r` — remove trees
+- `rmdir` — remove empty structure
+
+🧠 *Rule:* deletion is irreversible — be deliberate.
+
+---
+
+### 8️⃣ Exit the Context (Closure)
+When the session’s work is done.
+
+- `exit`
+
+🧠 *Rule:* leave the environment clean.
+
+---
+
+### 🧩 Where `mv` Fits Conceptually
+
+`mv` is not “just renaming”.
+
+It is:
+- moving **within** a structure
+- redefining **identity via location**
+- correcting mistakes without duplication
+
+If `cp` is *forking reality*,  
+`mv` is *rewriting history*.
 
 ---
 

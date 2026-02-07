@@ -228,4 +228,19 @@ If `cp` is *forking reality*,
 
 ---
 
+## 🚀 Teleportation & Remote Creation (Path-Based Thinking)
+
+One of the most important mental shifts in Bash is realising that **you do not need to be “in” a directory to operate on it**.
+
+Commands act on **paths**, not places.
+
+---
+
+### 🧠 Files Don’t Move — Paths Change
+
+When you run:
+
+```bash
+mv images/footer.jpeg client/assets/images/
+
 Knowing *what the command stands for* makes Bash feel less like magic and more like a readable language.

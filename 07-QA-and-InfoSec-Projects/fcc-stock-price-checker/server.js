@@ -11,13 +11,16 @@ const runner            = require('./test-runner');
 
 const app = express();
 
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'"],
-    styleSrc: ["'self'"]
-  }
-}));
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'"],
+      objectSrc: ["'none'"]
+    }
+  })
+);
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
